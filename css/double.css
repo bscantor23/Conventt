@@ -1,31 +1,20 @@
-* {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+.container-double {
     background: url("../img/generalAssets/systemBackground.png");
     background-size: cover;
-    font-family: Roboto;
-    box-sizing: border-box;
-}
-
-.container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 100%;
-    grid-template-areas: "diagram info";
+    grid-template-areas: "d-diagram d-info";
 }
 
-.diagram-container {
+.d-diagram-container {
     display: grid;
-    grid-area: diagram;
+    grid-area: d-diagram;
     background-color: #fff;
     box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.431);
 }
 
-.diagram-component {
+.d-diagram-component {
     position: fixed;
     top:8%;
     left:6%;
@@ -34,29 +23,30 @@ body {
     grid-template-columns: 500px;
     grid-row: repeat(2,auto);
     grid-template-areas: 
-        "title-diagram"
+        "d-title-diagram"
         "double-diagram";
     grid-gap:40px;
 }
 
-.title-diagram-section{
-    grid-area: title-diagram;
+.d-title-diagram-section{
+    grid-area: d-title-diagram;
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-.title-diagram-section h1 {
+.d-title-diagram-section h1 {
     font-size: 50px;
     color: #1A8BBC;
     font-weight: bold;
     text-align: center; 
 }
 
-.title-diagram-section hr {
+.d-title-diagram-section hr {
+    border: 0px;
+    border-bottom: 3px solid #d7d7d7 !important;
     margin-top: 20px;
     width: 400px;
-    border: 3px solid #d7d7d7;
     border-radius: 10px;
 }
 
@@ -69,19 +59,19 @@ body {
     grid-template-columns: 500px;
     grid-template-rows: 320px auto;
     grid-template-areas: 
-        "diagram-item"
-        "diagram-universe";
+        "d-diagram-item"
+        "d-diagram-universe";
 }
 
-.diagram-item {
-    grid-area: diagram-item;
+.d-diagram-item {
+    grid-area: d-diagram-item;
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: repeat(3,auto);
     grid-template-rows: 50% 50%;
     grid-template-areas:
-        "a-item     anb-item    b-item"
-        "com-item    com-item    com-item";
+        "d-a-item     d-anb-item    d-b-item"
+        "d-com-item    d-com-item    d-com-item";
     background: url("../img/doubleAssets/venttDiagram.png");
     background-size: 450px 300px;
     background-repeat: no-repeat;
@@ -91,61 +81,61 @@ body {
 
 }
 
-.diagram-item:hover{
+.d-diagram-item:hover{
     background-size: 470px 320px;
     transition: 0.3s;
 }
 
-.diagram-A-item,.diagram-AnB-item,.diagram-B-item,.diagram-com-item {
+.d-diagram-A-item,.d-diagram-AnB-item,.d-diagram-B-item,.d-diagram-com-item {
     display: grid;
     justify-content: center;
     align-content: flex-end;
 }
 
-.diagram-A-item {
-    grid-area: a-item;
+.d-diagram-A-item {
+    grid-area: d-a-item;
 }
 
-.diagram-AnB-item {
-    grid-area: anb-item;
+.d-diagram-AnB-item {
+    grid-area: d-anb-item;
 }
 
-.diagram-B-item {
-    grid-area: b-item;
+.d-diagram-B-item {
+    grid-area: d-b-item;
 }
 
-.diagram-com-item {
-    grid-area: com-item;
+.d-diagram-com-item {
+    grid-area: d-com-item;
     margin-bottom: 20px;
 }
 
-.diagram-item h2, .diagram-universe-item h2 {
+.d-diagram-item h2, .d-diagram-universe-item h2 {
     color: #fff;
     font-size: 30px;
 }
 
-.diagram-com-item h2 {
+.d-diagram-com-item h2 {
     color: #9A9A9A !important;
 }
 
-.diagram-universe-item {
-    grid-area: diagram-universe;
+.d-diagram-universe-item {
+    grid-area: d-diagram-universe;
     text-align: center;
 }
 
-.diagram-universe-item h2 {
+.d-diagram-universe-item h2 {
     color: #363636 !important;
 }
 
-.button-return {
+.d-button-return {
     position: fixed;
     margin: 10px;
     right: 0;
 }
 
-.info-container {
+.info-double-container {
     margin: 70px 0px 30px;
-    grid-area: info;
+    grid-area: d-info;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -153,15 +143,15 @@ body {
     grid-template-rows: repeat(2,auto);
     grid-gap: 60px;
     grid-template-areas: 
-        "form"
-        "results";
+        "d-form"
+        "d-results";
 }
 
-.information-component {
+.d-information-component {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: form;
+    grid-area: d-form;
     background-color: #fff;
     box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.431);
     border-radius: 20px;
@@ -169,59 +159,59 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: repeat(3,auto);
     grid-template-areas: 
-        "title-information"
-        "form-information"
-        "button-form";
+        "d-title-information"
+        "d-form-information"
+        "d-button-form";
 }
 
-.title-form-section {
+.d-title-form-section {
     display: grid;
     padding-top: 10px;
     align-content: flex-start;
-    grid-area: title-information;
+    grid-area: d-title-information;
     grid-template-columns: auto auto ;
     grid-template-rows: auto auto;
     grid-template-areas: 
-        "title-form     icon-form"
+        "d-title-form     d-icon-form"
 }
 
-.title-form {
+.d-title-form {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: title-form;
+    grid-area: d-title-form;
 }
 
-.title-form h2, .title-results-section h2 {
+.d-title-form h2, .d-title-results-section h2 {
     font-size: 25px;
     height: 40px;
     color: #1A8BBC;
     font-weight: bold;
 }
 
-.title-form hr, .title-results-section hr {
-    border: 3px solid #d7d7d7;
+.d-title-form hr, .d-title-results-section hr {
+    border: 0px;
+    border-bottom: 3px solid #d7d7d7 !important;
     border-radius: 10px;
-    height: 0px;
 }
 
-.form-container {
+.d-form-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: form-information;
+    grid-area: d-form-information;
     grid-template-columns: 95%;
     grid-template-rows: repeat(2,auto);
     grid-template-areas:
-        "form-row-1"
-        "form-row-2";
+        "d-form-row-1"
+        "d-form-row-2";
     row-gap: 20px;
 }
 
-.form-row-1 {
+.d-form-row-1 {
     margin: auto;
     display: grid;
-    grid-area: form-row-1;
+    grid-area: d-form-row-1;
     column-gap: 10px;
     grid-template-columns: repeat(2,230px);
 }
@@ -246,21 +236,21 @@ input:focus {
     outline: none;
 }
 
-.form-row-2 {
+.d-form-row-2 {
     margin: auto;
     display: grid;
-    grid-area: form-row-2;
+    grid-area: d-form-row-2;
     column-gap: 10px;
     grid-template-columns: repeat(2,237px);
 }
 
-.button-form {
+.d-button-form {
     display: grid;
     justify-content: center;
-    grid-area: button-form;
+    grid-area: d-button-form;
 }
 
-.button-calculate {
+.d-button-calculate {
     width: 300px;
     height: 50px;
     position: relative;
@@ -274,7 +264,7 @@ input:focus {
     transition: 0.4s;
 }
 
-.button-calculate:hover {
+.d-button-calculate:hover {
     border: 5px solid #1D79A1;
     background-color: #fff;
     color: #1D79A1;
@@ -283,15 +273,15 @@ input:focus {
     cursor: pointer;
 }
 
-.button-calculate:focus {
+.d-button-calculate:focus {
     background-color: #1D79A1;
     color: #fff;
     transition: 0.4s;   
     outline: none;
 }
 
-.results-container {
-    grid-area: results;
+.d-results-container {
+    grid-area: d-results;
     display: grid;
     justify-content: center;
     align-content: stretch;
@@ -303,65 +293,73 @@ input:focus {
     grid-gap: 20px;
     border-radius: 30px;
     grid-template-areas: 
-        "title-results      title-results       title-results"
-        "result-1           result-2            result-3"
-        "hr-1               hr-1                hr-1"
-        "result-4           result-5            result-6"
-        "hr-2               hr-2                hr-2"
-        "result-7           result-8            result-9"
-        "hr-3               hr-3                hr-3"
-        "result-10          result-11           result-12"
-        "hr-4               hr-4                hr-4";
+        "d-title-results      d-title-results       d-title-results"
+        "d-result-1           d-result-2            d-result-3"
+        "d-hr-1               d-hr-1                d-hr-1"
+        "d-result-4           d-result-5            d-result-6"
+        "d-hr-2               d-hr-2                d-hr-2"
+        "d-result-7           d-result-8            d-result-9"
+        "d-hr-3               d-hr-3                d-hr-3"
+        "d-result-10          d-result-11           d-result-12"
+        "d-hr-4               d-hr-4                d-hr-4";
 }
 
-.title-results-section {
-    grid-area: title-results;
+.d-title-results-section {
+    grid-area: d-title-results;
 }
 
-.img-result {
+.d-img-result {
     width: 140px;
     height: 100px;
     transition: 0.3s;
 }
 
-.img-result:hover {
+.d-img-result:hover {
     width: 160px;
     height: 110px;
     transition: 0.3s;
 }
 
-.result-item {
+.d-result-item {
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-
-.result-item p {
+.d-result-item p {
     text-align: center;
     color: #9A9A9A;
     font-size: 18px;
     font-weight: bold;
 }
 
-.row-result-1, .row-result-2, .row-result-3, .row-result-4 {
+.d-row-result-1, .d-row-result-2, .d-row-result-3, .d-row-result-4 {
     border: 1px solid #d7d7d7;
 }
 
-.row-result-1 {
-    grid-area: hr-1;
+.d-row-result-1,
+.d-row-result-2,
+.d-row-result-3,
+.d-row-result-4 {
+    border: 0px;
+    border-bottom: 3px solid #d7d7d7 !important;
+    border-radius: 10px;
 }
 
-.row-result-2 {
-    grid-area: hr-2;
+.d-row-result-1 {
+    grid-area: d-hr-1;
 }
 
-.row-result-3 {
-    grid-area: hr-3;
+.d-row-result-2 {
+    grid-area: d-hr-2;
 }
 
-.row-result-4 {
-    grid-area: hr-4;
+.d-row-result-3 {
+    grid-area: d-hr-3;
+}
+
+.d-row-result-4 {
+    grid-area: d-hr-4;
 }
 
 

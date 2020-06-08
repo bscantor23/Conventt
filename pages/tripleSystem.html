@@ -6,185 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conventt -Teoría de Conjuntos</title>
     <link rel="stylesheet" href="../css/triple.css">
+    <link rel="stylesheet" href="../css/app.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="shortcut icon" href="../img/generalAssets/tripleGroup.png"/>
 </head>
 
 <body>
-    <div class="container">
-        <div class="diagram-container">
-            <div class="diagram-component">
-                <div class="title-diagram-section">
+    <div class="container-triple">
+        <div class="t-diagram-container">
+            <div class="t-diagram-component">
+                <div class="t-title-diagram-section">
                     <h1>DIAGRAMA</h1>
-                    <hr>
+                    <hr/>
                 </div>
                 <div class="triple-diagram-section">
-                    <div class="diagram-item">
-                        <div class="diagram-A-item">
+                    <div class="t-diagram-item">
+                        <div class="t-diagram-A-item">
                             <h2>200</h2>
                         </div>
-                        <div class="diagram-com-item">
+                        <div class="t-diagram-com-item">
                             <h2>72</h2>
                         </div>
-                        <div class="diagram-AnB-item">
+                        <div class="t-diagram-AnB-item">
                             <h2>105</h2>
                         </div>
-                        <div class="diagram-AnBnC-item">
+                        <div class="t-diagram-AnBnC-item">
                             <h2>8</h2>
                         </div>
-                        <div class="diagram-AnC-item">
+                        <div class="t-diagram-AnC-item">
                             <h2>7</h2>
                         </div>
-                        <div class="diagram-B-item">
+                        <div class="t-diagram-B-item">
                             <h2>105</h2>
                         </div>
-                        <div class="diagram-BnC-item">
+                        <div class="t-diagram-BnC-item">
                             <h2>25</h2>
                         </div>
-                        <div class="diagram-C-item">
+                        <div class="t-diagram-C-item">
                             <h2>238</h2>
                         </div>
                     </div>
-                    <div class="diagram-universe-item">
+                    <div class="t-diagram-universe-item">
                         <h2>760</h2>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="button-return">
+        <div class="t-button-return">
             <a href="../index.html">
-                <img src="../img/generalAssets/returnButton.png" alt="">
+                <img src="../img/generalAssets/returnButton.png" alt=""/>
             </a>
         </div>
-        <div class="info-container">
-            <div class="information-component">
-                <div class="title-form-section">
-                    <div class="title-form">
+        <div class="info-triple-container">
+            <div class="t-information-component">
+                <div class="t-title-form-section">
+                    <div class="t-title-form">
                         <h2>Información Recopilada</h2>
-                        <hr>
+                        <hr/>
                     </div>
-                    <img class="triple-icon" src="../img/generalAssets/tripleGroup.png" alt="">
+                    <img class="triple-icon" src="../img/generalAssets/tripleGroup.png" alt=""/>
                 </div>
-                <div class="form-container">
-                    <div class="form-row-1">
+                <div class="t-form-container">
+                    <div class="t-form-row-1">
                         <div>
                             <label for="universo">Universo: </label>
-                            <input type="number" id="universo" placeholder="Digite un valor" required>
+                            <input type="number" id="universo" placeholder="Digite un valor" required/>
                         </div>
                         <div>
                             <label for="interseccion">AnB: </label>
-                            <input type="number" id="interseccion" placeholder="Digite un valor" required>
+                            <input type="number" id="interseccion" placeholder="Digite un valor" required/>
                         </div>
                     </div>
-                    <div class="form-row-2">
+                    <div class="t-form-row-2">
                         <div>
                             <label for="conA">Conjunto A: </label>
-                            <input type="number" id="conA" placeholder="Digite un valor" required>
+                            <input type="number" id="conA" placeholder="Digite un valor" required/>
                         </div>
                         <div>
                             <label for="conB">Conjunto B: </label>
-                            <input type="number" id="conB" placeholder="Digite un valor" required>
+                            <input type="number" id="conB" placeholder="Digite un valor" required/>
                         </div>
                     </div>     
-                    <hr>
-                    <div class="form-row-3">
+                    <hr/>
+                    <div class="t-form-row-3">
                         <div>
                             <label for="anb">AnB: </label>
-                            <input type="number" id="anb" placeholder="Digite un valor" required>
+                            <input type="number" id="anb" placeholder="Digite un valor" required/>
                         </div>
                         <div>
                             <label for="anc">AnC: </label>
-                            <input type="number" id="anc" placeholder="Digite un valor" required>
+                            <input type="number" id="anc" placeholder="Digite un valor" required/>
                         </div>
                     </div>
-                    <div class="form-row-4">
+                    <div class="t-form-row-4">
                         <div>
                             <label for="bnc">BnC: </label>
-                            <input type="number" id="bnc" placeholder="Digite un valor" required>
+                            <input type="number" id="bnc" placeholder="Digite un valor" required/>
                         </div>
                         <div>
                             <label for="abnc">AnBnC: </label>
-                            <input type="number" id="abnc" placeholder="Digite un valor" required>
+                            <input type="number" id="abnc" placeholder="Digite un valor" required/>
                         </div>
                     </div>
                 </div>
-                <div class="button-form">
-                    <button id="calculate" class="button-calculate">CALCULAR</button>
+                <div class="t-button-form">
+                    <button id="calculate" class="t-button-calculate">CALCULAR</button>
                 </div>
             </div>
-            <div class="results-container">
-                <div class="title-results-section">
+            <div class="t-results-container">
+                <div class="t-title-results-section">
                     <h2>Resultados</h2>
-                    <hr>
+                    <hr/>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>A = 320</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt1.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt1.png" alt=""/>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>B = 243</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt2.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt2.png" alt=""/>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>C = 278</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt3.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt3.png" alt=""/>
                 </div>
 
-                <hr class="row-result-1">
+                <hr class="t-row-result-1"/>
 
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>A-B-(AnBnC)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt4.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt4.png" alt=""/>
                     <p>105</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>AnC-(AnBnC)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt5.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt5.png" alt=""/>
                     <p>7</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>BnC-(AnBnC)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt6.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt6.png" alt=""/>
                     <p>25</p>
                 </div>
 
-                <hr class="row-result-2">
+                <hr class="t-row-result-2"/>
 
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>A-(BuC)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt7.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt7.png" alt=""/>
                     <p>200</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>B-(AuC)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt8.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt8.png" alt=""/>
                     <p>105</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>C-(AuB)</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt9.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt9.png" alt=""/>
                     <p>238</p>
                 </div>
 
-                <hr class="row-result-3">
+                <hr class="t-row-result-3"/>
 
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>(AnBnC)u(AuBuC)<sup>C</sup></p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt10.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt10.png" alt=""/>
                     <p>80</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>AnBnC</p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt11.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt11.png" alt=""/>
                     <p>8</p>
                 </div>
-                <div class="result-item">
+                <div class="t-result-item">
                     <p>(AuBuC)<sup>C</sup></p>
-                    <img class="img-result" src="../img/tripleAssets/TripleVentt12.png" alt="">
+                    <img class="t-img-result" src="../img/tripleAssets/TripleVentt12.png" alt=""/>
                     <p>72</p>
                 </div>
 
-                <hr class="row-result-4">
+                <hr class="t-row-result-4"/>
 
             </div>
         </div>

@@ -1,31 +1,20 @@
-* {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
+.container-triple {
     background: url("../img/generalAssets/systemBackground.png");
     background-size: cover;
-    font-family: Roboto;
-    box-sizing: border-box;
-}
-
-.container {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: 100%;
-    grid-template-areas: "diagram info";
+    grid-template-areas: "t-diagram t-info";
 }
 
-.diagram-container {
+.t-diagram-container {
     display: grid;
-    grid-area: diagram;
+    grid-area: t-diagram;
     background-color: #fff;
     box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.431);
 }
 
-.diagram-component {
+.t-diagram-component {
     position: fixed;
     top:8%;
     left:2%;
@@ -34,29 +23,30 @@ body {
     grid-template-columns: 600px;
     grid-row: auto auto;
     grid-template-areas: 
-        "title-diagram"
+        "t-title-diagram"
         "triple-diagram";
-    row-gap:40px;
+    row-gap:10px;
 }
 
-.title-diagram-section{
-    grid-area: title-diagram;
+.t-title-diagram-section{
+    grid-area: t-title-diagram;
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
-.title-diagram-section h1 {
+.t-title-diagram-section h1 {
     font-size: 50px;
     color: #1A8BBC;
     font-weight: bold;
     text-align: center; 
 }
 
-.title-diagram-section hr {
+.t-title-diagram-section hr {
     margin-top: 20px;
     width: 400px;
-    border: 3px solid #d7d7d7;
+    border: 0px;
+    border-bottom: 3px solid #d7d7d7;
     border-radius: 10px;
 }
 
@@ -69,20 +59,20 @@ body {
     grid-template-columns: 550px;
     grid-template-rows: 400px auto;
     grid-template-areas: 
-        "diagram-item"
-        "diagram-universe";
+        "t-diagram-item"
+        "t-diagram-universe";
 }
 
-.diagram-item {
-    grid-area: diagram-item;
+.t-diagram-item {
+    grid-area: t-diagram-item;
     display: grid;
     justify-content: space-evenly;
     grid-template-columns: 300px 60px 300px;
     grid-template-rows: repeat(3,auto);
     grid-template-areas:
-        "space     a-item    com-item"
-        "anb-item    anbnc-item    anc-item"
-        "b-item    bnc-item    c-item";
+        "t-space     t-a-item    t-com-item"
+        "t-anb-item    t-anbnc-item    t-anc-item"
+        "t-b-item    t-bnc-item    t-c-item";
         
     background: url("../img/tripleAssets/venttDiagram.png");
     background-size: 500px 440px;
@@ -92,103 +82,103 @@ body {
     transition: 0.3s;
 }
 
-.diagram-item:hover{
+.t-diagram-item:hover{
     background-size: 540px 480px;
     transition: 0.3s;
 }
 
-.diagram-A-item,
-.diagram-com-item,
-.diagram-AnB-item,
-.diagram-AnBnC-item,
-.diagram-AnC-item,
-.diagram-B-item,
-.diagram-BnC-item,
-.diagram-C-item {
+.t-diagram-A-item,
+.t-diagram-com-item,
+.t-diagram-AnB-item,
+.t-diagram-AnBnC-item,
+.t-diagram-AnC-item,
+.t-diagram-B-item,
+.t-diagram-BnC-item,
+.t-diagram-C-item {
     display: grid;
     justify-content: center;
     align-content: flex-end;
 }
 
-.diagram-A-item {
-    grid-area: a-item;
+.t-diagram-A-item {
+    grid-area: t-a-item;
 }
 
-.diagram-com-item {
-    grid-area: com-item;
+.t-diagram-com-item {
+    grid-area: t-com-item;
 }
 
-.diagram-AnB-item {
+.t-diagram-AnB-item {
     justify-content: flex-end;
     align-content: center;
-    grid-area: anb-item;
+    grid-area: t-anb-item;
 }
 
-.diagram-AnBnC-item {
+.t-diagram-AnBnC-item {
     padding-top: 60px;
     align-content: center;
-    grid-area: anbnc-item;
+    grid-area: t-anbnc-item;
 }
 
-.diagram-AnC-item {
+.t-diagram-AnC-item {
     justify-content: flex-start;
     align-content: center;
-    grid-area: anc-item;
+    grid-area: t-anc-item;
 }
 
-.diagram-B-item {
+.t-diagram-B-item {
     justify-content: flex-end;
     margin-right: 50px;
     margin-bottom: 30px;
     align-content:flex-start;
-    grid-area: b-item;
+    grid-area: t-b-item;
 }
 
-.diagram-BnC-item {
+.t-diagram-BnC-item {
     align-content:flex-start;
     margin-bottom: 30px;
-    grid-area: bnc-item;
+    grid-area: t-bnc-item;
 }
 
-.diagram-C-item {
+.t-diagram-C-item {
     justify-content: flex-start;
     margin-left: 50px;
     margin-bottom: 30px;
     align-content:flex-start;
-    grid-area: c-item;
+    grid-area: t-c-item;
 }
 
-.diagram-item h2, .diagram-universe-item h2 {
+.t-diagram-item h2, .t-diagram-universe-item h2 {
     color: #fff;
     font-size: 25px;
 }
 
-.diagram-A-item h2, .diagram-B-item h2, .diagram-C-item h2 {
+.t-diagram-A-item h2, .t-diagram-B-item h2, .t-diagram-C-item h2 {
     font-size: 30px !important;
 }
 
-.diagram-com-item h2 {
+.t-diagram-com-item h2 {
     color: #9A9A9A !important;
 }
 
-.diagram-universe-item {
-    grid-area: diagram-universe;
+.t-diagram-universe-item {
+    grid-area: t-diagram-universe;
     text-align: center;
 }
 
-.diagram-universe-item h2 {
+.t-diagram-universe-item h2 {
     color: #363636 !important;
 }
 
-.button-return {
+.t-button-return {
     position: fixed;
     margin: 10px;
     right: 0;
 }
 
-.info-container {
+.info-triple-container {
     margin: 70px 0px 30px;
-    grid-area: info;
+    grid-area: t-info;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -196,15 +186,15 @@ body {
     grid-template-rows: repeat(2,auto);
     grid-gap: 60px;
     grid-template-areas: 
-        "form"
-        "results";
+        "t-form"
+        "t-results";
 }
 
-.information-component {
+.t-information-component {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: form;
+    grid-area: t-form;
     background-color: #fff;
     box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.431);
     border-radius: 20px;
@@ -212,37 +202,37 @@ body {
     grid-template-columns: 100%;
     grid-template-rows: repeat(3,auto);
     grid-template-areas: 
-        "title-information"
-        "form-information"
-        "button-form";
+        "t-title-information"
+        "t-form-information"
+        "t-button-form";
 }
 
-.title-form-section {
+.t-title-form-section {
     display: grid;
     padding-top: 10px;
     align-content: flex-start;
-    grid-area: title-information;
+    grid-area: t-title-information;
     grid-template-columns: auto auto ;
     grid-template-rows: auto auto;
     grid-template-areas: 
-        "title-form     icon-form"
+        "t-title-form     t-icon-form"
 }
 
-.title-form {
+.t-title-form {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: title-form;
+    grid-area: t-title-form;
 }
 
-.title-form h2, .title-results-section h2 {
+.t-title-form h2, .t-title-results-section h2 {
     font-size: 25px;
     height: 40px;
     color: #1A8BBC;
     font-weight: bold;
 }
 
-.title-form hr, .title-results-section hr {
+.t-title-form hr, .t-title-results-section hr {
     border: 3px solid #d7d7d7;
     border-radius: 10px;
     height: 0px;
@@ -253,26 +243,26 @@ body {
     height: 100px;
 }
 
-.form-container {
+.t-form-container {
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-area: form-information;
+    grid-area: t-form-information;
     grid-template-columns: 95%;
     grid-template-rows: repeat(5,auto);
     grid-template-areas:
-        "form-row-1"
-        "form-row-2"
-        "hr"
-        "form-row-3"
-        "form-row-4";
+        "t-form-row-1"
+        "t-form-row-2"
+        "t-hr"
+        "t-form-row-3"
+        "t-form-row-4";
     row-gap: 20px;
 }
 
-.form-row-1 {
+.t-form-row-1 {
     margin: auto;
     display: grid;
-    grid-area: form-row-1;
+    grid-area: t-form-row-1;
     column-gap: 10px;
     grid-template-columns: repeat(2,220px);
 }
@@ -298,43 +288,43 @@ input:focus {
     outline: none;
 }
 
-.form-row-2 {
+.t-form-row-2 {
     margin: auto;
     display: grid;
-    grid-area: form-row-2;
+    grid-area: t-form-row-2;
     column-gap: 10px;
     grid-template-columns: repeat(2,237px);
 }
 
-.form-container hr {
+.t-form-container hr {
     width: 80%;
     margin: auto;
     border: 1px solid #d7d7d7;
 }
 
-.form-row-3 {
+.t-form-row-3 {
     margin: auto;
     display: grid;
-    grid-area: form-row-3;
+    grid-area: t-form-row-3;
     column-gap: 10px;
     grid-template-columns: repeat(2,237px);
 }
 
-.form-row-4 {
+.t-form-row-4 {
     margin: auto;
     display: grid;
-    grid-area: form-row-4;
+    grid-area: t-form-row-4;
     column-gap: 10px;
     grid-template-columns: repeat(2,237px);
 }
 
-.button-form {
+.t-button-form {
     display: grid;
     justify-content: center;
-    grid-area: button-form;
+    grid-area: t-button-form;
 }
 
-.button-calculate {
+.t-button-calculate {
     width: 300px;
     height: 50px;
     position: relative;
@@ -348,24 +338,24 @@ input:focus {
     transition: 0.4s;
 }
 
-.button-calculate:hover {
+.t-button-calculate:hover {
     border: 5px solid #1D79A1;
     background-color: #fff;
     color: #1D79A1;
-    transition: 0.4s;
+    transition: 0.t4s;
     width: 310px;
     cursor: pointer;
 }
 
-.button-calculate:focus {
+.t-button-calculate:focus {
     background-color: #1D79A1;
     color: #fff;
-    transition: 0.4s;   
+    transition: 0.t-4s;   
     outline: none;
 }
 
-.results-container {
-    grid-area: results;
+.t-results-container {
+    grid-area: t-results;
     display: grid;
     justify-content: center;
     align-content: stretch;
@@ -377,65 +367,65 @@ input:focus {
     grid-gap: 20px;
     border-radius: 30px;
     grid-template-areas: 
-        "title-results      title-results       title-results"
-        "result-1           result-2            result-3"
-        "hr-1               hr-1                hr-1"
-        "result-4           result-5            result-6"
-        "hr-2               hr-2                hr-2"
-        "result-7           result-8            result-9"
-        "hr-3               hr-3                hr-3"
-        "result-10          result-11           result-12"
-        "hr-4               hr-4                hr-4";
+        "t-title-results      t-title-results       t-title-results"
+        "t-result-1           t-result-2            t-result-3"
+        "t-hr-1               t-hr-1                t-hr-1"
+        "t-result-4           t-result-5            t-result-6"
+        "t-hr-2               t-hr-2                t-hr-2"
+        "t-result-7           t-result-8            t-result-9"
+        "t-hr-3               t-hr-3                t-hr-3"
+        "t-result-10          t-result-11           t-result-12"
+        "t-hr-4               t-hr-4                t-hr-4";
 }
 
-.title-results-section {
-    grid-area: title-results;
+.t-title-results-section {
+    grid-area: t-title-results;
 }
 
-.img-result {
+.t-img-result {
     width: 140px;
     height: 100px;
     transition: 0.3s;
 }
 
-.img-result:hover {
+.t-img-result:hover {
     width: 160px;
     height: 110px;
     transition: 0.3s;
 }
 
-.result-item {
+.t-result-item {
     display: grid;
     justify-content: center;
     align-content: center;
 }
 
 
-.result-item p {
+.t-result-item p {
     text-align: center;
     color: #9A9A9A;
     font-size: 18px;
     font-weight: bold;
 }
 
-.row-result-1, .row-result-2, .row-result-3, .row-result-4 {
+.t-row-result-1, .t-row-result-2, .t-row-result-3, .t-row-result-4 {
     border: 1px solid #d7d7d7;
 }
 
-.row-result-1 {
-    grid-area: hr-1;
+.t-row-result-1 {
+    grid-area: t-hr-1;
 }
 
-.row-result-2 {
-    grid-area: hr-2;
+.t-row-result-2 {
+    grid-area: t-hr-2;
 }
 
-.row-result-3 {
-    grid-area: hr-3;
+.t-row-result-3 {
+    grid-area: t-hr-3;
 }
 
-.row-result-4 {
-    grid-area: hr-4;
+.t-row-result-4 {
+    grid-area: t-hr-4;
 }
 
 
