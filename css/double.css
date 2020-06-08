@@ -1,0 +1,366 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../img/generalAssets/systemBackground.png");
+    background-size: cover;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 100%;
+    grid-template-areas: "diagram info";
+}
+
+.diagram-container {
+    display: grid;
+    grid-area: diagram;
+    background-color: #fff;
+    box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.431);
+}
+
+.diagram-component {
+    position: fixed;
+    top:8%;
+    left:6%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 500px;
+    grid-row: repeat(2,auto);
+    grid-template-areas: 
+        "title-diagram"
+        "double-diagram";
+    grid-gap:40px;
+}
+
+.title-diagram-section{
+    grid-area: title-diagram;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.title-diagram-section h1 {
+    font-size: 50px;
+    color: #1A8BBC;
+    font-weight: bold;
+    text-align: center; 
+}
+
+.title-diagram-section hr {
+    margin-top: 20px;
+    width: 400px;
+    border: 3px solid #d7d7d7;
+    border-radius: 10px;
+}
+
+.double-diagram-section {
+    grid-area: double-diagram;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 40px;
+    grid-template-columns: 500px;
+    grid-template-rows: 320px auto;
+    grid-template-areas: 
+        "diagram-item"
+        "diagram-universe";
+}
+
+.diagram-item {
+    grid-area: diagram-item;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+        "a-item     anb-item    b-item"
+        "com-item    com-item    com-item";
+    background: url("../img/doubleAssets/venttDiagram.png");
+    background-size: 450px 300px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.431);
+    transition: 0.3s;
+
+}
+
+.diagram-item:hover{
+    background-size: 470px 320px;
+    transition: 0.3s;
+}
+
+.diagram-A-item,.diagram-AnB-item,.diagram-B-item,.diagram-com-item {
+    display: grid;
+    justify-content: center;
+    align-content: flex-end;
+}
+
+.diagram-A-item {
+    grid-area: a-item;
+}
+
+.diagram-AnB-item {
+    grid-area: anb-item;
+}
+
+.diagram-B-item {
+    grid-area: b-item;
+}
+
+.diagram-com-item {
+    grid-area: com-item;
+    margin-bottom: 20px;
+}
+
+.diagram-item h2, .diagram-universe-item h2 {
+    color: #fff;
+    font-size: 30px;
+}
+
+.diagram-com-item h2 {
+    color: #9A9A9A !important;
+}
+
+.diagram-universe-item {
+    grid-area: diagram-universe;
+    text-align: center;
+}
+
+.diagram-universe-item h2 {
+    color: #363636 !important;
+}
+
+.button-return {
+    position: fixed;
+    margin: 10px;
+    right: 0;
+}
+
+.info-container {
+    margin: 70px 0px 30px;
+    grid-area: info;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 80%;
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 60px;
+    grid-template-areas: 
+        "form"
+        "results";
+}
+
+.information-component {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-area: form;
+    background-color: #fff;
+    border-radius: 20px;
+    row-gap: 20px;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3,auto);
+    grid-template-areas: 
+        "title-information"
+        "form-information"
+        "button-form";
+}
+
+.title-form-section {
+    display: grid;
+    padding-top: 10px;
+    align-content: flex-start;
+    grid-area: title-information;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+        "title-form     icon-form"
+}
+
+.title-form {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-area: title-form;
+}
+
+.title-form h2, .title-results-section h2 {
+    font-size: 25px;
+    height: 40px;
+    color: #1A8BBC;
+    font-weight: bold;
+}
+
+.title-form hr, .title-results-section hr {
+    border: 3px solid #d7d7d7;
+    border-radius: 10px;
+    height: 0px;
+}
+
+.form-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-area: form-information;
+    grid-template-columns: 95%;
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+        "form-row-1"
+        "form-row-2";
+    row-gap: 20px;
+}
+
+.form-row-1 {
+    margin: auto;
+    display: grid;
+    grid-area: form-row-1;
+    column-gap: 40px;
+    grid-template-columns: repeat(2,220px);
+}
+
+label {
+    color: #9A9A9A;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+input {
+    border: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #707070 !important;
+    width: 120px;
+    color: #9A9A9A;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-row-2 {
+    margin: auto;
+    display: grid;
+    grid-area: form-row-2;
+    column-gap: 10px;
+    grid-template-columns: repeat(2,237px);
+}
+
+.button-form {
+    display: grid;
+    justify-content: center;
+    grid-area: button-form;
+}
+
+.button-calculate {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    background-color: #1D79A1;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.button-calculate:hover {
+    border: 5px solid #1D79A1;
+    background-color: #fff;
+    color: #1D79A1;
+    transition: 0.4s;
+    width: 310px;
+    cursor: pointer;
+}
+
+.button-calculate:focus {
+    background-color: #1D79A1;
+    color: #fff;
+    transition: 0.4s;   
+    outline: none;
+}
+
+.results-container {
+    grid-area: results;
+    display: grid;
+    justify-content: center;
+    align-content: stretch;
+    padding: 40px 25px;
+    grid-template-columns: repeat(3,30%);
+    grid-template-rows: 50px 120px auto 120px auto 120px auto 140px auto;
+    background-color: #fff;
+    grid-gap: 20px;
+    border-radius: 30px;
+    grid-template-areas: 
+        "title-results      title-results       title-results"
+        "result-1           result-2            result-3"
+        "hr-1               hr-1                hr-1"
+        "result-4           result-5            result-6"
+        "hr-2               hr-2                hr-2"
+        "result-7           result-8            result-9"
+        "hr-3               hr-3                hr-3"
+        "result-10          result-11           result-12"
+        "hr-4               hr-4                hr-4";
+}
+
+.title-results-section {
+    grid-area: title-results;
+}
+
+.img-result {
+    width: 140px;
+    height: 100px;
+    transition: 0.3s;
+}
+
+.img-result:hover {
+    width: 160px;
+    height: 110px;
+    transition: 0.3s;
+}
+
+.result-item {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+
+.result-item p {
+    text-align: center;
+    color: #9A9A9A;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.row-result-1, .row-result-2, .row-result-3, .row-result-4 {
+    border: 1px solid #d7d7d7;
+}
+
+.row-result-1 {
+    grid-area: hr-1;
+}
+
+.row-result-2 {
+    grid-area: hr-2;
+}
+
+.row-result-3 {
+    grid-area: hr-3;
+}
+
+.row-result-4 {
+    grid-area: hr-4;
+}
+
+
+
