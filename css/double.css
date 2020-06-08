@@ -163,6 +163,7 @@ body {
     align-content: center;
     grid-area: form;
     background-color: #fff;
+    box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.431);
     border-radius: 20px;
     row-gap: 20px;
     grid-template-columns: 100%;
@@ -221,8 +222,8 @@ body {
     margin: auto;
     display: grid;
     grid-area: form-row-1;
-    column-gap: 40px;
-    grid-template-columns: repeat(2,220px);
+    column-gap: 10px;
+    grid-template-columns: repeat(2,230px);
 }
 
 label {
@@ -234,7 +235,7 @@ label {
 input {
     border: 0px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #707070 !important;
+    border-bottom: 0.5px solid #7070706b !important;
     width: 120px;
     color: #9A9A9A;
     font-family: Roboto;
@@ -298,6 +299,7 @@ input:focus {
     grid-template-columns: repeat(3,30%);
     grid-template-rows: 50px 120px auto 120px auto 120px auto 140px auto;
     background-color: #fff;
+    box-shadow: 5px 3px 6px rgba(0, 0, 0, 0.431);
     grid-gap: 20px;
     border-radius: 30px;
     grid-template-areas: 
