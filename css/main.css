@@ -1,0 +1,115 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+h1,h2,h3,h4,h5,p {
+    font-family: Roboto;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body{
+    background: url("../img/generalAssets/indexBackground.png");
+    background-size: cover;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 80px;
+    grid-template-columns: 500px;
+    grid-template-rows: 180px repeat(2,auto);
+    grid-template-areas: 
+        "logo"
+        "info"
+        "buttons";
+    grid-gap: 40px;
+}
+
+.logo-container,.info-container,.buttons-container,
+.double-button, .triple-button{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.logo-container {
+    grid-area: logo;
+
+}
+
+.info-container {
+    grid-area: info
+}
+
+.info-container p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info-container hr {
+    margin-top: 20px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.logo{
+    width: 300px;
+    height: 140px;
+    transition: 0.4s;
+}
+
+.logo:hover {
+    width: 340px;
+    height: 170px;
+    transition: 0.4s;
+}
+
+.buttons-container {
+    grid-area:buttons;
+    grid-template-columns: repeat(2,240px);
+    grid-template-rows: auto;
+    grid-template-areas: "double triple";
+    grid-gap:50px;
+}
+
+.double-button, .triple-button {
+    width: 240px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 40px;
+    border:0px;
+    transition: 0.5s;
+}
+
+.double-button hr, .triple-button hr {
+    border: 3px solid #d7d7d7;
+    border-radius: 10px;
+}
+
+.double-button a {
+    margin: 40px 0px 0px;
+    display: grid;
+    align-content: center;
+}
+
+.double-button:hover, .triple-button:hover {
+    transition: 0.5s;
+    border: 8px solid #1D79A1;
+}
+
+.img-button-2 {
+    width: 150px;
+    height: 150px;
+}
+
+.img-button-1 {
+    width: 160px;
+    height: 100px;
+}
+
+
