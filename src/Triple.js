@@ -76,32 +76,32 @@ class Triple extends Component {
                         <div className="triple-diagram-section">
                             <div className="t-diagram-item">
                                 <div className="t-diagram-A-item">
-                                    <h2>{dif <= universo && a >= 0 && conA > 0 ? a : "X"}</h2>
+                                    <h2>{dif <= universo && a >= 0 && conA >= 0 && conAnB >= conAnBnC && conAnC >= conAnBnC ? a : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-com-item">
-                                    <h2>{com >= 0 ? com : "ERROR"}</h2>
+                                    <h2>{com >= 0 && dif <= universo && conAnBnC >=0 &&  conAnB >= conAnBnC && conBnC >= conAnBnC && conAnC >= conAnBnC   ? com : "?"}</h2>
                                 </div>
                                 <div className="t-diagram-AnB-item">
-                                    <h2>{dif <= universo  && ab >= 0 ? ab : "X"}</h2>
+                                    <h2>{dif <= universo  && ab >= 0 && conAnBnC >=0 ? ab : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-AnBnC-item">
-                                    <h2>{dif <= universo ? conAnBnC : "X"}</h2>
+                                    <h2>{dif <= universo && conAnBnC >=0 ? conAnBnC : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-AnC-item">
-                                    <h2>{dif <= universo && ac >= 0 ? ac : "X"}</h2>
+                                    <h2>{dif <= universo && ac >= 0 && conAnBnC >=0 ? ac : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-B-item">
-                                    <h2>{dif <= universo && b >= 0 && conB > 0 ? b : "X"}</h2>
+                                    <h2>{dif <= universo && b >= 0 && conB >= 0 && conAnB >= conAnBnC && conBnC >= conAnBnC ? b : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-BnC-item">
-                                    <h2>{dif <= universo && bc >= 0 ? bc : "X"}</h2>
+                                    <h2>{dif <= universo && bc >= 0 && conAnBnC >=0 ? bc : "X"}</h2>
                                 </div>
                                 <div className="t-diagram-C-item">
-                                    <h2>{dif <= universo && c >= 0 && conC > 0 ? c : "X"}</h2>
+                                    <h2>{dif <= universo && c >= 0 && conC >= 0 && conAnC >= conAnBnC && conBnC >= conAnBnC ? c : "X"}</h2>
                                 </div>
                             </div>
                             <div className="t-diagram-universe-item">
-                                <h2>{universo}</h2>
+                                <h2>{universo >= 0 ? universo : "?" }</h2>
                             </div>
                         </div>
                     </div>
@@ -167,9 +167,6 @@ class Triple extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="t-button-form">
-                            <button id="calculate" className="t-button-calculate">CALCULAR</button>
-                        </div>
                     </div>
                     <div className="t-results-container">
                         <div className="t-title-results-section">
@@ -177,15 +174,15 @@ class Triple extends Component {
                             <hr />
                         </div>
                         <div className="t-result-item">
-                            <p>A = {dif <= universo ? conA : "?"}</p>
+                            <p>A = {dif <= universo && conA>=0 ? conA : "?"}</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt1.png" alt="" />
                         </div>
                         <div className="t-result-item">
-                            <p>B = {dif <= universo ? conB : "?"}</p>
+                            <p>B = {dif <= universo && conB>=0 ? conB : "?"}</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt2.png" alt="" />
                         </div>
                         <div className="t-result-item">
-                            <p>C = {dif <= universo ? conC : "?"}</p>
+                            <p>C = {dif <= universo && conC>=0 ? conC : "?"}</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt3.png" alt="" />
                         </div>
 
@@ -194,17 +191,17 @@ class Triple extends Component {
                         <div className="t-result-item">
                             <p>AnB-(AnBnC)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt4.png" alt="" />
-                            <p>{dif <= universo ? conAnB - conAnBnC : "?"}</p>
+                            <p>{dif <= universo && (conAnB - conAnBnC) >=0 ? conAnB - conAnBnC : "?"}</p>
                         </div>
                         <div className="t-result-item">
                             <p>AnC-(AnBnC)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt5.png" alt="" />
-                            <p>{dif <= universo ? conAnC - conAnBnC : "?"}</p>
+                            <p>{dif <= universo && (conAnC - conAnBnC) >=0 ? conAnC - conAnBnC : "?"}</p>
                         </div>
                         <div className="t-result-item">
                             <p>BnC-(AnBnC)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt6.png" alt="" />
-                            <p>{dif <= universo ? conBnC - conAnBnC : "?"}</p>
+                            <p>{dif <= universo && (conBnC - conAnBnC) >=0 ? conBnC - conAnBnC : "?"}</p>
                         </div>
 
                         <hr className="t-row-result-2" />
@@ -212,17 +209,17 @@ class Triple extends Component {
                         <div className="t-result-item">
                             <p>A-(BuC)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt7.png" alt="" />
-                            <p>{dif <= universo ? a : "?"}</p>
+                            <p>{dif <= universo && a>=0 && conAnB >= conAnBnC && conAnC >= conAnBnC  ? a : "?"}</p>
                         </div>
                         <div className="t-result-item">
                             <p>B-(AuC)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt8.png" alt="" />
-                            <p>{dif <= universo ? b : "?"}</p>
+                            <p>{dif <= universo && b>=0  && conAnB >= conAnBnC && conBnC >= conAnBnC    ? b : "?"}</p>
                         </div>
                         <div className="t-result-item">
                             <p>C-(AuB)</p>
                             <img className="t-img-result" src="../img/tripleAssets/TripleVentt9.png" alt="" />
-                            <p>{dif <= universo ? c : "?"}</p>
+                            <p>{dif <= universo && c>=0 && conAnC >= conAnBnC && conBnC >= conAnBnC   ? c : "?"}</p>
                         </div>
 
                         <hr className="t-row-result-3" />

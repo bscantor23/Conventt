@@ -47,20 +47,20 @@ class Double extends Component {
                         <div className="double-diagram-section">
                             <div className="d-diagram-item">
                                 <div className="d-diagram-A-item">
-                                    <h2>{dif <= universo && conAnB <= universo ? (ab < 0 ? "X" : ab) : "X"}</h2>
+                                    <h2>{dif <= universo && conAnB <= universo && conAnB >=0  ? (ab < 0 ? "X" : ab) : "X"}</h2>
                                 </div>
                                 <div className="d-diagram-AnB-item">
-                                    <h2>{dif <= universo && conAnB <= universo ? conAnB : "X"}</h2>
+                                    <h2>{dif <= universo && conAnB <= universo && conAnB >=0 ? conAnB : "X"}</h2>
                                 </div>
                                 <div className="d-diagram-B-item">
-                                    <h2>{dif <= universo && conAnB <= universo ? (ba < 0 ? "X" : ba) : "X"}</h2>
+                                    <h2>{dif <= universo && conAnB <= universo && conAnB >=0  ? (ba < 0 ? "X" : ba) : "X"}</h2>
                                 </div>
                                 <div className="d-diagram-com-item">
-                                    <h2>{com >= 0 && conAnB <= universo ? com : "ERROR"}</h2>
+                                    <h2>{com >= 0 && conAnB>= 0 && dif <= universo && conAnB >=0  ? com : "?"}</h2>
                                 </div>
                             </div>
                             <div className="d-diagram-universe-item">
-                                <h2>{universo}</h2>
+                                <h2>{universo >= 0 ? universo : "?"}</h2>
                             </div>
                         </div>
                     </div>
@@ -110,45 +110,45 @@ class Double extends Component {
                             <hr />
                         </div>
                         <div className="d-result-item">
-                            <p>A = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0 ? conA : "?"}</p>
+                            <p>A = {dif <= universo && conAnB <= universo && conAnB >=0 && ab >= 0  && ba >=0 ? conA : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble1.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>AnB = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? conAnB : "?"}</p>
+                            <p>AnB = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? conAnB : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble2.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>B = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? conB : "?"}</p>
+                            <p>B = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? conB : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble3.png" alt="" />
                         </div>
 
                         <hr className="d-row-result-1" />
 
                         <div className="d-result-item">
-                            <p>A-B = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? ab : "?"}</p>
+                            <p>A-B = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? ab : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble4.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>AuB = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? ab + conAnB + ba : "?"}</p>
+                            <p>AuB = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? ab + conAnB + ba : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble5.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>B-A = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? ba : "?"}</p>
+                            <p>B-A = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? ba : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble6.png" alt="" />
                         </div>
 
                         <hr className="d-row-result-2" />
 
                         <div className="d-result-item">
-                            <p>B<sup>C</sup> = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? ab + com : "?"}</p>
+                            <p>B<sup>C</sup> = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? ab + com : "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble7.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>(AuB)<sup>C</sup> = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? com: "?"}</p>
+                            <p>(AuB)<sup>C</sup> = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? com: "?"}</p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble8.png" alt="" />
                         </div>
                         <div className="d-result-item">
-                            <p>A<sup>C</sup> = {dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? ba + com : "?"} </p>
+                            <p>A<sup>C</sup> = {dif <= universo && conAnB <= universo  && conAnB >=0 && ab >= 0 && ba >=0  ? ba + com : "?"} </p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble9.png" alt="" />
                         </div>
 
@@ -157,17 +157,17 @@ class Double extends Component {
                         <div className="d-result-item">
                             <p>Au(AuB)<sup>C</sup></p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble10.png" alt="" />
-                            <p>{dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? conA + com : "?"}</p>
+                            <p>{dif <= universo && conAnB <= universo && conAnB >=0 && ab >= 0 && ba >=0  ? conA + com : "?"}</p>
                         </div>
                         <div className="d-result-item">
                             <p>(AnB)u(AuB)<sup>C</sup></p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble11.png" alt="" />
-                            <p>{dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? conAnB + com : "?"}   </p>
+                            <p>{dif <= universo && conAnB <= universo && conAnB >=0 && ab >= 0 && ba >=0  ? conAnB + com : "?"}   </p>
                         </div>
                         <div className="d-result-item">
                             <p>Bu(AuB)<sup>C</sup></p>
                             <img className="d-img-result" src="../img/doubleAssets/venttDouble12.png" alt="" />
-                            <p>{dif <= universo && conAnB <= universo && ab >= 0 && ba >=0  ? conB + com : "?"}</p>
+                            <p>{dif <= universo && conAnB <= universo && conAnB >=0 && ab >= 0 && ba >=0  ? conB + com : "?"}</p>
                         </div>
                         <hr className="d-row-result-4" />
                     </div>
