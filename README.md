@@ -8,7 +8,7 @@ Sistema de Información Web para la teoría de Conjuntos con diagramas de Ventt 
  
 ## Comenzando 🚀
 
-Ingresa al siguiente enlace: [Conventt](https://bscantor23.github.io/Conventt/) 📢
+Ingresa al siguiente enlace: [Conventt](http://conventt.neme.xyz/) 📢
 
 
 ---
